@@ -10,7 +10,44 @@ body {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
+
+#momentum-header {
+    width: 100vw;
+    height: 500px;
+    display: flex;
+}
+
+#weather {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5px;
+    
+}
+
+.weather__column {
+    font-size: 30px;
+    padding-right: 5px;
+}
+
+#momentum-main {
+    width: 100vw;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+}
+
+/* 
+#clock {
+    display: flex;
+} */
 
 .hidden {
     display: none;

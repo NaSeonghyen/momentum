@@ -6,27 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="img/momentum_favicon.png">
-    <title>모멘텀 앱</title>
+    <title>모멘텀(Clone)</title>
 </head>
 <body>
-    <div id="weather">
-        <span></span>
-        <span></span>
-    </div>
-    <h2 id="clock">00:00:00</h2>
-    <form class="hidden" id="login-form">
-        <input required maxlength="15" type="text" placeholder="What is your name?">
-        <input type="submit" value="Log In">
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-        <input type="text" placeholder="Write a To Do and Press Enter" required>
-    </form>
-    <ul id="todo-list"></ul>
-    <div id="quote">
-        <span></span>
-        <span></span>
-    </div>
+    <header id="momentum-header">
+        <div id="weather">
+            <span class="weather__column"></span>
+            <span class="weather__column"></span>
+            <span class="weather__column"></span>
+        </div>
+    </header>
+    <main id="momentum-main">
+        <h2 id="clock">00:00:00</h2>
+        <form class="hidden" id="login-form">
+            <input required maxlength="15" type="text" placeholder="What is your name?">
+            <input type="submit" value="Log In">
+        </form>
+        <h1 id="greeting" class="hidden"></h1>
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" required>
+        </form>
+    </main>
+    <footer id="momentum-footer">
+        <ul id="todo-list"></ul>
+        <div id="quote">
+            <span></span>
+            <span></span>
+        </div>
+    </footer>
+
     <!-- fontawesome 사용을 위한 script 선언(나의 kit's Code 사용) -->
     <script src="https://kit.fontawesome.com/146b963287.js" crossorigin="anonymous"></script>
     <!-- 사용자 정보 입력 관련 js -->
