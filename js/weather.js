@@ -19,4 +19,7 @@ function onGeoError() {
     alert("Can't find you. No weather for you.");
 }
 
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+
+if(weatherss.className !== "hidden"){
+    navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+}
