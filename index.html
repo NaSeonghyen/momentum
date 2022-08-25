@@ -17,20 +17,32 @@
         </div>
     </header>
     <main id="momentum-main">
-        <h2 id="clock" class="hidden">00:00:00</h2>
+        <div class="main__column">
+            <h2 id="clock" class="hidden">00:00:00</h2>
+            <h3 id="date" class="hidden">0000년 0월 0일</h3>
+        </div>
         <form class="hidden" id="login-form">
             <input required maxlength="15" type="text" placeholder="닉네임을 입력해주세요">
         </form>
         <h1 id="greeting" class="hidden"></h1>
     </main>
     <footer id="momentum-footer">
-        <form id="todo-form" class="hidden">
-            <input type="text" placeholder="Write a To Do and Press Enter" required>
-        </form>
-        <ul id="todo-list" class="hidden"></ul>
-        <div id="quote" class="hidden">
+        <div class="footer__column"></div>
+        <div id="quote" class="hidden footer__column quote--position">
             <span></span>
             <span></span>
+        </div>
+        <div class="footer__column">
+            <div id="todo" class="todo--position hidden">
+                <i class="fa-solid fa-list">
+                    <div class="todo-container">
+                        <form id="todo-form" class="hidden">
+                            <input type="text" placeholder="오늘 할 일을 입력해주세요." required>
+                        </form>
+                        <ul id="todo-list" class="hidden"></ul>
+                    </div>
+                </i>
+            </div>
         </div>
     </footer>
 
@@ -38,7 +50,7 @@
     <script src="https://kit.fontawesome.com/146b963287.js" crossorigin="anonymous"></script>
     <!-- 사용자 정보 입력 관련 js -->
     <script src="js/greetings.js"></script>
-    <!-- 시간 기능 관련 js -->
+    <!-- 날짜/시간 기능 관련 js -->
     <script src="js/clock.js"></script>
     <!-- 랜덤 명언 js -->
     <script src="js/quotes.js"></script>
