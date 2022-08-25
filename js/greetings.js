@@ -4,9 +4,7 @@ const greeting = document.querySelector("#greeting");
 
 const weatherss = document.querySelector("#weather");
 const clocks = document.querySelector("#clock");
-const todoForm = document.querySelector("#todo-form");
 const quotess = document.querySelector("#quote");
-const toDoLists = document.querySelector("#todo-list");
 const todotodo = document.querySelector("#todo"); 
 const datess = document.querySelector("#date");
 
@@ -27,9 +25,7 @@ function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);
     weatherss.classList.remove(HIDDEN_CLASSNAME);
     clocks.classList.remove(HIDDEN_CLASSNAME);
-    todoForm.classList.remove(HIDDEN_CLASSNAME);
     quotess.classList.remove(HIDDEN_CLASSNAME);
-    toDoLists.classList.remove(HIDDEN_CLASSNAME);
     todotodo.classList.remove(HIDDEN_CLASSNAME);
     datess.classList.remove(HIDDEN_CLASSNAME);
     navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
