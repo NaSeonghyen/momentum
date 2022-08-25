@@ -7,7 +7,8 @@ const clocks = document.querySelector("#clock");
 const todoForm = document.querySelector("#todo-form");
 const quotess = document.querySelector("#quote");
 const toDoLists = document.querySelector("#todo-list");
-     
+const todotodo = document.querySelector("#todo"); 
+const datess = document.querySelector("#date");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
@@ -29,6 +30,8 @@ function paintGreetings(username) {
     todoForm.classList.remove(HIDDEN_CLASSNAME);
     quotess.classList.remove(HIDDEN_CLASSNAME);
     toDoLists.classList.remove(HIDDEN_CLASSNAME);
+    todotodo.classList.remove(HIDDEN_CLASSNAME);
+    datess.classList.remove(HIDDEN_CLASSNAME);
     navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 }
 

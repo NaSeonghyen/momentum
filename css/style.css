@@ -31,7 +31,7 @@ body {
 }
 
 .weather__column {
-    font-size: 30px;
+    font-size: 3vw;
     padding-right: 5px;
 }
 
@@ -43,6 +43,19 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 50px;
+}
+
+.main__column {
+    text-align: center;
+    margin: 3vw 0 5vw;
+}
+
+#clock {
+    font-size: 10vw;
+}
+
+#date {
+    font-size: 5vw;
 }
 
 #login-form input{
@@ -72,13 +85,51 @@ body {
     width: 100vw;
     height: 600px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end;    
 }
-/* 
-#clock {
+
+.footer__column {
+    width: 33vw;
+}
+
+.quote--position {
     display: flex;
-} */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
+.quote--position span:first-child {
+    font-size: 1.6vw;
+}
+
+.quote--position span:last-child {
+    font-size: 1.3vw;
+    opacity: 0.7;
+}
+
+.todo--position {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5px;
+}
+
+#todo {
+    position: relative;
+}
+
+#todo i {
+ font-size: 2vw;
+}
+
+.todo-container {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+}
 
 .hidden {
     display: none;
