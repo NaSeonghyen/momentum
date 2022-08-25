@@ -1,6 +1,8 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
+const toDo = document.querySelector("#todo");
+const toDoImage = document.querySelector("#todo i");
 
 const TODOS_KEY = "todos";
 
@@ -23,7 +25,8 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.text;
     const button = document.createElement("button");
-    button.innerText = "X";
+    button.innerText = "❌";
+    button.style.backgroundColor="var(--transparent)";
     button.addEventListener("click", deleteToDo);
     li.appendChild(button);
     li.appendChild(span);
@@ -43,8 +46,13 @@ function handleToDoSubmit(event) {
     saveToDos();
 }
 
-toDoForm.addEventListener("submit",handleToDoSubmit);
+function toDoListDisplay(){
+    const display = toDo.querySelector(".todo-container");
+    display.classList.toggle('hidden');
+}
 
+toDoForm.addEventListener("submit",handleToDoSubmit);
+toDoImage.addEventListener("click",toDoListDisplay);
 // function sayHello(item) {
 //     console.log(`hello, ${item}`);
 // }

@@ -131,6 +131,8 @@ body {
     right: 0;
     bottom: 5.5vw;
     background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 1vw;
+    padding: 1vw;
 }
 
 #todo-form input, .todo-container ul {
@@ -151,7 +153,7 @@ body {
 
 #todo-form input::placeholder {
     text-align: center;
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.4);
 }
 
 .hidden {
