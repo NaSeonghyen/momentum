@@ -60,6 +60,7 @@ body {
 
 #login-form input:focus::placeholder {
     color: transparent;
+    transition: color .3s;
 }
 
 #login-form input::placeholder {
