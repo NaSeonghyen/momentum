@@ -9,3 +9,5 @@ Nomad Coders 바닐라 js로 크롬 앱 만들기 <br>
 - 2022.08.23 momentum clone 완료 <br>
 
 - 2022.08.24 momentum customizing 시작 <br>
+
+- 2022.08.26 momentum customizing 완료 <br>
