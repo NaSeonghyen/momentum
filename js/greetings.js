@@ -2,16 +2,15 @@ const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 
-const weatherss = document.querySelector("#weather");
-const weatherssss = document.querySelectorAll("#weather span");
-const clocks = document.querySelector("#clock");
-const quotess = document.querySelector("#quote");
-const todotodo = document.querySelector("#todo"); 
-const datess = document.querySelector("#date");
-const greetings = document.querySelector("#greetings");
-const greetingImage = document.querySelector("#greetings span");
+const weatherDisplay = document.querySelectorAll("#weather span");
+const clockDisplay = document.querySelector("#clock");
+const quoteDisplay = document.querySelector("#quote");
+const todoDisplay = document.querySelector("#todo"); 
+const dateDisplay = document.querySelector("#date");
+const previousImage = document.querySelector("#greetings span");
 
 const HIDDEN_CLASSNAME = "hidden";
+const WEATHER_HIDDEN_CLASSNAME = "weather--hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
@@ -26,39 +25,35 @@ function onLoginSubmit(event) {
 function paintGreetings(username) {
     greeting.innerText = `안녕하세요, ${username}님`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
-    weatherss.classList.remove(HIDDEN_CLASSNAME);
-    clocks.classList.remove(HIDDEN_CLASSNAME);
-    quotess.classList.remove(HIDDEN_CLASSNAME);
-    todotodo.classList.remove(HIDDEN_CLASSNAME);
-    datess.classList.remove(HIDDEN_CLASSNAME);
-    greetings.classList.remove(HIDDEN_CLASSNAME);
-    greetingImage.classList.remove(HIDDEN_CLASSNAME);
-    navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+    weatherDisplay.forEach(function(data){data.classList.remove(WEATHER_HIDDEN_CLASSNAME);});
+    clockDisplay.classList.remove(HIDDEN_CLASSNAME);
+    quoteDisplay.classList.remove(HIDDEN_CLASSNAME);
+    todoDisplay.classList.remove(HIDDEN_CLASSNAME);
+    dateDisplay.classList.remove(HIDDEN_CLASSNAME);
+    previousImage.classList.remove(HIDDEN_CLASSNAME);
 }
 
 function ClickPrevious() {
-    console.log(weatherssss);
     localStorage.removeItem(USERNAME_KEY);
     greeting.classList.add(HIDDEN_CLASSNAME);
-    weatherss.classList.add(HIDDEN_CLASSNAME);
-    clocks.classList.add(HIDDEN_CLASSNAME);
-    quotess.classList.add(HIDDEN_CLASSNAME);
-    todotodo.classList.add(HIDDEN_CLASSNAME);
-    datess.classList.add(HIDDEN_CLASSNAME);
-    greetings.classList.add(HIDDEN_CLASSNAME);
-    greetingImage.classList.add(HIDDEN_CLASSNAME);
+    weatherDisplay.forEach(function(data){data.classList.add(WEATHER_HIDDEN_CLASSNAME);});
+    clockDisplay.classList.add(HIDDEN_CLASSNAME);
+    quoteDisplay.classList.add(HIDDEN_CLASSNAME);
+    todoDisplay.classList.add(HIDDEN_CLASSNAME);
+    dateDisplay.classList.add(HIDDEN_CLASSNAME);
+    previousImage.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
     loginInput.value = "";
-    weatherssss.forEach(function(data){data.innerText="";});
+    
 }
 
-greetingImage.addEventListener("click", ClickPrevious);
+previousImage.addEventListener("click", ClickPrevious);
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
+loginForm.addEventListener("submit", onLoginSubmit);
 
 if (savedUsername === null) {
     loginForm.classList.remove(HIDDEN_CLASSNAME);
-    loginForm.addEventListener("submit", onLoginSubmit);
 } else {
     paintGreetings(savedUsername);
 }

@@ -17,10 +17,13 @@ const onGeoOk = function(position) {
 }
 
 const onGeoError = function(){
-    alert("Can't find you. No weather for you.");
+    alert("당신을 찾을 수 없어 날씨 정보를 불러올 수 없습니다.");
 }
 
-
-if(weatherss.className !== "hidden"){
+const weatherInfo = function() {
     navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
-}
+} 
+
+// 2022.08.26 실시간 날씨정보 가져오기
+weatherInfo();
+setInterval(weatherInfo, 1000);

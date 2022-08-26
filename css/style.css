@@ -15,6 +15,7 @@ body {
     overflow: hidden;
 }
 
+/* 헤더(날씨) */
 #momentum-header {
     width: 100vw;
     height: 25vh;
@@ -37,6 +38,7 @@ body {
     padding-right: 5px;
 }
 
+/* 메인(닉네임,날짜/시간) */
 #momentum-main {
     width: 100vw;
     height: 50vh;
@@ -105,6 +107,7 @@ body {
     color: var(--white);
 }
 
+/* 푸터(명언,ToDoList) */
 #momentum-footer {
     width: 100vw;
     height: 25vh;
@@ -197,6 +200,12 @@ body {
     color: var(--gray);
 }
 
+/* 숨김처리 */
 .hidden {
     display: none;
+}
+
+/* 날짜 숨김처리 */
+.weather--hidden {
+    color:var(--transparent);
 }
