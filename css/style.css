@@ -67,6 +67,11 @@ body {
 
 #greetings span:hover {
     cursor: pointer;
+    color:var(--light-gray);
+}
+
+#greetings span:active {
+    color:var(--gray);
 }
 
 #clock {
