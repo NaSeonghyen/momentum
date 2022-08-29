@@ -14,6 +14,7 @@ const onGeoOk = function(position) {
             temp.innerText = `${(data.main.temp).toFixed(1)}ºc`;
             city.innerText = data.name;
     });
+    setInterval(onGeoOk, 1000);
 }
 
 const onGeoError = function(){
@@ -26,4 +27,3 @@ const weatherInfo = function() {
 
 // 2022.08.26 실시간 날씨정보 가져오기
 weatherInfo();
-setInterval(weatherInfo, 1000);
